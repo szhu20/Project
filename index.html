@@ -4,18 +4,40 @@
   <meta charset="utf-8">
   <title>Burnside's Lemma</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 </head>
 <body>
   <div id="header">
 <h1>Burnside's Lemma</h1>
-<h3>By Sebastian Zhu</h3>
+<!-- <h3>By Sebastian Zhu</h3> -->
 </div>
-<h4>
+<div id="content">
+<h3 class="title">Introduction to Bunside's Lemma</h3>
+<p>
+Consider a ring with eight circles.
+</p>
+<img src=""/> <!-- put in blank ring when you make it -->
+<p>
+  Suppose that we can color each circle in four different ways.</p>
+  <img src=""/> <!-- show colors (red, blue, yellow, green) -->
+  <p> It would seem like there are $8^4=4096$ possible rings we could make from these colors, and this is true if the ring is bolted to the ground. However, what if we allowed ourselves to rotate the ring? There would no longer be $4096$ possible rings, as
+</p>
+<img src=""/> <!-- image 1 -->
+<p>and</p>
+<img src=""/> <!-- image 1 rotated -->
+<p>
+  would be considered the same. How do we fix this problem? It seems like a much more difficult task now with this restriction. The power of Burnside's Lemma, however, allows us to approach this problem in a much different way than you could possibly anticipate.
+</p>
+<div id="circle"></div>
 
-</h4>
-
-
+<a href="statement.html">Statement of Burnside's Lemma</a>
+</div>
 
 
 </body>
