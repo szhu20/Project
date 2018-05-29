@@ -4,6 +4,8 @@ var current = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 function onClick(num, id) {
   current[num] = (current[num] + 1) % 4;
   document.getElementById(id).className = "bead" + (num % 8 + 1) + " " + colors[current[num]] + " ball";
+
+  // detects whether or not the configurations are equivalent and updates the light accordingly
   var same;
   for (var i = 0; i < 8; i++) {
     same = true;
