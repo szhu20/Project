@@ -1,22 +1,27 @@
+/* gets rid of unnecessary whitespace */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* sets font and overall style */
 body {
   font-family: Verdana, sans-serif;
   background-color: #96beff;
   padding: 0 0 50px 0;
 }
 
+/* gets rid of ugly underline for links */
 a {
   text-decoration: none;
 }
 
+/* gives paragraphs a little more space */
 p {
   padding: 10px 0;
 }
 
+/* adjusts the style for the header of the website */
 #header {
   text-align: center;
   color: #ffffff;
@@ -27,37 +32,44 @@ p {
   background-image: url("636154731398800060-2119844250_math.jpg");
 }
 
+/* adjusts the style for the content of each page */
 #content {
   padding: 10px 25%;
   text-align: justify;
 }
 
+/* puts links to previous page on the left */
 #prev {
   float: left;
 }
 
+/* puts links to next page on the right */
 #next {
   float: right;
 }
 
-/* .latex {
-  text-align: center;
-} */
-
+/* gives an underline to titles */
 .title {
   text-decoration: underline;
 }
 
+/* styling for the div checking whether or not the two rings are equivalent */
+#check {
+  text-align: center;
+}
+
+/* represents the ring */
 .ring {
   /* padding: 0 25%; */
-  width: 300px;
-  height: 300px;
-  border-radius: 300px;
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
   background: none;
   border: 6px solid #820000;
   margin: 50px auto;
 }
 
+/* represents the beads */
 .ball {
   width: 30px;
   height: 30px;
@@ -65,34 +77,140 @@ p {
   border: 3px solid black;
 }
 
-.circle1 {
-  position: absolute;
-  top: 116px;
-  right: 350px;
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  border: 2px solid black;
-  margin: 0 auto;
-  background-color: red;
+/* each of these classes corresponds to a possible color of the beads */
+
+.white {
+  background-color: white;
 }
-.circle2 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  border: 3px solid black;
-  margin: 40px 50px 260px 250px;
+.red {
   background-color: red;
 }
 
-.circle3 {
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+/* white buttons on index.html */
+#white1 {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
-  border: 3px solid black;
-  margin: 150px 0 150px 300px;
+  margin: 0 auto;
+  top: 235px;
+  right: 705px;
+}
+
+#white2 {
+  position: absolute;
+  margin: 0 auto;
+  top: 275px;
+  right: 615px;
+}
+
+#white3 {
+  position: absolute;
+  margin: 0 auto;
+  top: 360px;
+  right: 578px;
+}
+
+#white4 {
+  position: absolute;
+  margin: 0 auto;
+  top: 450px;
+  right: 615px;
+}
+
+#white5 {
+  position: absolute;
+  margin: 0 auto;
+  top: 490px;
+  right: 705px;
+}
+
+#white6 {
+  position: absolute;
+  margin: 0 auto;
+  top: 455px;
+  right: 795px;
+}
+
+#white7 {
+  position: absolute;
+  margin: 0 auto;
+  top: 360px;
+  right: 832px;
+}
+
+#white8 {
+  position: absolute;
+  margin: 0 auto;
+  top: 270px;
+  right: 795px;
+}
+
+/* at this point I realized it's a lot easier to use position: relative, but I wasn't about to change all the stuff I did above */
+/* example ring */
+.bead1 {
+  position: relative;
+  margin: 0 auto;
+  bottom: 20px;
+  left: 112px;
+}
+
+.bead2 {
+  position: relative;
+  margin: 0 auto;
+  top: 20px;
+  left: 163px;
+}
+
+.bead3 {
+  position: relative;
+  margin: 0 auto;
+  top: 100px;
+  left: 163px;
+}
+
+.bead4 {
+  position: relative;
+  margin: 0 auto;
+  top: 200px;
+  left: 90px;
+}
+
+.bead5 {
+  position: relative;
+  margin: 0 auto;
+  top: 235px;
+  right: 35px;
+}
+
+.bead6 {
+  position: relative;
+  margin: 0 auto;
+  top: 205px;
+  right: 160px;
+}
+
+.bead7 {
+  position: relative;
+  margin: 0 auto;
+  top: 100px;
+  right: 237px;
+}
+
+.bead8 {
+  position: relative;
+  margin: 0 auto;
+  bottom: 17px;
+  left: 25px;
 }
 
 /* Dropdown Button */
@@ -104,6 +222,10 @@ p {
     border: none;
 }
 
+/* gets rid of the ugly outline around buttons when clicked on */
+button:focus {
+  outline: 0;
+}
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
@@ -116,7 +238,6 @@ p {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 310px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
 }
 

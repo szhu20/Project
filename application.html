@@ -12,10 +12,10 @@
 </script>
 
 </head>
+<!-- nothing special -->
 <body>
   <div id="header">
 <h1>Burnside's Lemma</h1>
-<!-- <h3>By Sebastian Zhu</h3> -->
 </div>
 <div class="dropdown" style="float:left;">
   <button class="dropbtn">≡</button>
@@ -30,7 +30,13 @@
 <div id="content">
   <h3 class="title">Solving the Wheel Problem</h3>
 <p>
-  
+  Let's use Burnside's Lemma to solve the wheel problem. In particular, let $X$ be the set of all possible wheels, with rotations considered distinct, and let $G$ be the rotation group on this wheel. That is, the elements of $G$ are rotations of $0^\circ$, $45^\circ$, $90^\circ$, $135^\circ$, $180^\circ$, $225^\circ$, $270^\circ$, and $315^\circ$. We can see, therefore, that $|G|=8$. We want $|X/G|$, which tells us the number of distinct wheels, considering rotations.
+</p>
+<p>
+  Now let's inspect the term $\sum_{g\in G}|X^g|$. We'll consider the elements fixed by each element of $G$. Since every element is fixed by a rotation of $0^\circ$, the term $|X^g|=4096$ when $g$ is the $0^\circ$ rotation. Now consider when $g$ is a $45^\circ$ rotation. Then all the wheels that are fixed by this rotation are those with all beads the same color. There are $4$ of these. Also, note that the same thing happens when $g$ is a $135^\circ$, $225^\circ$, or $315^\circ$ rotation. Each of these will contribute $4$ to the total. When $g$ is a $90^\circ$ rotation, the north, east, west, and south beads must be the same color, and the other beads must also be of the same color. This gives us $4\cdot 4=16$ wheels fixed in total by $g$. When $g$ is a $180^\circ$ rotation, we need only for opposing beads to be the same color. This gives us $4^4=256$ wheels in this case. Finally, when $g$ is a $270^\circ$ rotation, this is equivalent to $g$ being a $90^\circ$ rotation, supplying $16$ different wheels.
+</p>
+<p>
+  Therefore $$|X/G|=\dfrac{1}{|G|}\sum_{g\in G}|X^g|=\dfrac{1}{8}(4096+4+16+4+256+4+16+4)=550.$$ Thus there are $550$ possible wheels, up to rotation. This would probably have been a real pain to calculate without Burnside's Lemma, thereby highlighting the power of this tool.
 </p>
 
   <a id="prev" href="interactive.html">Exploring the Wheel Problem</a>
