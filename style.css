@@ -48,14 +48,53 @@ p {
   text-decoration: underline;
 }
 
-.circle {
+.ring {
   /* padding: 0 25%; */
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
   background: none;
-  border: 4px solid green;
+  border: 6px solid #820000;
+  margin: 50px auto;
 }
+
+.ball {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 3px solid black;
+}
+
+.circle1 {
+  position: absolute;
+  top: 116px;
+  right: 350px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 2px solid black;
+  margin: 0 auto;
+  background-color: red;
+}
+.circle2 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 3px solid black;
+  margin: 40px 50px 260px 250px;
+  background-color: red;
+}
+
+.circle3 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 3px solid black;
+  margin: 150px 0 150px 300px;
+}
+
 /* Dropdown Button */
 .dropbtn {
     background-color: #4CAF50;

@@ -29,8 +29,19 @@
 </div>
 <div id="content">
   <h3 class="title">Proof of Burnside's Lemma</h3>
+<p>
+  The proof of Burnside's Lemma is not terribly hard, although it does incorporate some group-theoretic ideas. Before we continue, let's make one more definition.
+</p>
+<p>Define the <i>stabilizer</i> of an element $x\in X$ under the group action associated with the group $G$ as the set $\text{Stab}(x)=\{g\in G\mid gx=x\}$. In other words, $\text{Stab}(x)$ is the set of elements $g$ that fix $x$.
+</p>
+<p>
+  Now we introduce the following proposition:$$|\text{Orb}(x)|\cdot |\text{Stab}(x)|=|G|.$$ This famous result, derived from group-theoretic techniques that are beyond the scope of this website, is called the <i>orbit-stabilizer theorem</i>. It will be used to great effect in the following proof of Burnside's Lemma.
+</p>
+<p>
+  The first step is noticing that the sum $\displaystyle\sum_{g\in G}|X^g|$ counts the $x\in X$ that are fixed for each $g$ over all $g$'s. This is essentially counting the number of pairs $(g,x)$ such that $gx=x$. Therefore, instead of counting which $x$ are fixed by each $g$, we can instead count the $g$ fixing $x$ for each $x$. But this is just the stabilizer for each $x$! Therefore we derive the following result: $$\sum_{g\in G}|X^g|=\sum_{x\in X}|\text{Stab}(x)|.$$ Using the orbit-stabilizer theorem, we can rewrite the sum as $$\sum_{x\in X}|\text{Stab}(x)|=\sum_{x\in X}\dfrac{|G|}{|\text{Orb}(x)|}=|G|\sum_{x\in X}\dfrac{1}{|\text{Orb}(x)|}.$$ However, notice that if $A$ is an orbit of $X$ with respect to $G$, then $$\sum_{x\in A}\dfrac{1}{|\text{Orb}(x)|}=1,$$ because we are summing $|\text{Orb}(x)|$ copies of $\dfrac{1}{|\text{Orb}(x)|}$. Therefore, since $X$ can be split into disjoint orbits, we have that the desired sum is equal to the number of orbits of $X$, or $$\sum_{x\in X}\dfrac{1}{|\text{Orb}(x)|}=|X/G|.$$ Therefore $$\sum_{g\in G}|X^g|=|G||X/G|,$$ as desired. $\square$
+</p>
 
-
+  <a id="prev" href="application.html">Solving the Wheel Problem</a>
 </div>
 </body>
 </html>
